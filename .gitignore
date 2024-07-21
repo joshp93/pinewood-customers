@@ -1,0 +1,60 @@
+# Ignore the build output directory
+bin/
+obj/
+
+# Ignore user-specific files
+*.user
+*.suo
+*.userosscache
+*.suo
+*.swp
+*.tmp
+
+# Ignore ASP.NET Core build and runtime directories
+wwwroot/
+*.db
+
+# Ignore configuration files with sensitive data
+appsettings.Development.json
+appsettings.json
+appsettings.{Environment}.json
+
+# Ignore the package directory
+packages/
+
+# Ignore NuGet packages
+*.nupkg
+*.snupkg
+
+# Ignore VS Code settings
+.vscode/
+
+.vs/
+
+# Ignore Rider settings
+.idea/
+
+# Ignore ReSharper files
+*.DotSettings
+*.DotSettings.user
+
+# Ignore Visual Studio Code workspace settings
+.history/
+
+# Ignore build results
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+
+# Ignore the database files
+*.mdf
+*.ldf
+
+# Ignore backup files
+*.bak
+*.sql
+
+# Ignore npm and yarn directories
+node_modules/

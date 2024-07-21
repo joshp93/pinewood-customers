@@ -1,0 +1,50 @@
+﻿@page
+@using PinewoodCustomers.Models
+@model PinewoodCustomers.Pages.CustomersModel
+@{
+	<h1>Customers</h1>
+	<hr />
+	<form method="post">
+		<div class="form-group">
+			<label for="name">Name</label>
+			<input type="text" name="name" required class="form-control mb-2" />
+		</div>
+		<button type="submit" class="btn btn-primary">Add</button>
+	</form>
+
+	<form id="remove" method="post"></form>
+
+	<form id="edit" method="post"></form>
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<td></td>
+				<td>Id</td>
+				<td>Name</td>
+				<td>Creation Date</td>
+				<td></td>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (Customer customer in Model.Customers)
+			{
+				<tr>
+					<td>
+						<button class="btn btn-primary" form="edit" asp-page-handler="Edit" asp-route-id="@customer.Id" type="submit">
+							Edit
+						</button>
+					</td>
+					<td>@customer.Id</td>
+					<td>@customer.Name</td>
+					<td>@customer.CreationDate</td>
+					<td>
+						<button class="btn btn-danger" form="remove" asp-page-handler="Remove" asp-route-id="@customer.Id" type="submit">
+							Delete
+						</button>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}
