@@ -7,9 +7,9 @@ namespace PinewoodCustomers.Pages
 {
 	public class CustomerModel : PageModel
     {
-        private readonly CustomerDbContext _context;
+        private readonly PinewoodDbContext _context;
 
-        public CustomerModel(CustomerDbContext context)
+        public CustomerModel(PinewoodDbContext context)
         {
             _context = context;
         }

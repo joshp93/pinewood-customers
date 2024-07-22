@@ -4,7 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddDbContext<CustomerDbContext>();
+builder.Services.AddDbContext<PinewoodDbContext>();
 
 var app = builder.Build();
 

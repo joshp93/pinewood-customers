@@ -6,21 +6,20 @@ namespace PinewoodCustomers.Pages
 {
 	public class CustomersModel : PageModel
 	{
-		private readonly CustomerDbContext _context;
+		private readonly PinewoodDbContext _context;
 
 		[BindProperty]
 		public Customer NewCustomer { get; set; }
 
 		public List<Customer> Customers { get; set; } = new List<Customer>();
 
-		public CustomersModel(CustomerDbContext context)
+		public CustomersModel(PinewoodDbContext context)
 		{
 			_context = context;
 		}
 
 		public void OnGet()
 		{
-			ViewData["Title"] = "Customers";
 			Customers = _context.Customers.ToList();
 		}
 

@@ -2,10 +2,10 @@
 
 namespace PinewoodCustomers.Models
 {
-	public class CustomerDbContext : DbContext
+	public class PinewoodDbContext : DbContext
 	{
 		IConfiguration _configuration;
-		public CustomerDbContext(IConfiguration configuration)
+		public PinewoodDbContext(IConfiguration configuration)
 		{
 			_configuration = configuration;
 		}
